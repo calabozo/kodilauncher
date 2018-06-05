@@ -17,7 +17,7 @@ clean:
 	rm -f $(SRCDIR)/*.o
 	rm -f $(TARGET)
 
-install: $(TARGET)
+install: build
 	cp $(TARGET) /usr/local/bin/
 	cp res/$(TARGET).service /usr/lib/systemd/system/
 	systemctl enable $(TARGET).service 
